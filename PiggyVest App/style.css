@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}  
+.wrapper{
+    margin: 0 auto;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    height: 10vh;
+    padding-right: 12px;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.mobile-menu{
+    display: none;
+}
+.toggle{
+    display: none;
+}
+.nav-links{
+    display: flex;
+    text-align: center;
+}
+.nav-button{
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    /* color: #fff; */
+}
+button a{
+    color: #fff;
+}
+li{
+    list-style: none;
+}
+h1, h2, h3 {
+    font-size: 2rem;
+}
+.menu a {
+    text-decoration: none;
+    display: block;
+    color: #222;
+    padding: 5px 20px;
+}
+.button.primary a{
+    padding: 12px;
+    border: 1px solid hsla(211, 51%, 10%, 0.324);
+    border-radius: 6px;
+}
+.button.secondary a{
+    padding: 12px;
+    color: #fff;
+    border-radius: 6px;
+    background: hsl(211.2,51.02%,9.61%);
+}
+.button.primary a:hover{
+    border: 1px solid hsl(215.51,82.35%,53.33%);
+    transition: all 2000ms ease-in;
+}
+.button.secondary a:hover{
+    background-color: hsl(215.51,82.35%,53.33%);
+    transition: all 2000ms ease-in;
+}
+.btn{
+    width: fit-content;
+    padding: 12px;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    background: hsl(211.2,51.02%,9.61%);
+}
+.btn:hover{
+    cursor: pointer;
+    border: none;
+    background-color: hsl(215.51,82.35%,53.33%);
+    transition: all 2000ms ease-in;
+}
+.os{
+    display: flex;
+    gap: 1rem;
+}
+.app{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #222;
+    gap: 0.3rem;
+    border-radius: 9px;
+    border: 1px solid hsla(211, 51%, 10%, 0.324);
+}
+.app:hover{
+    border: 1px solid hsla(220, 1%, 41%, 0.797);
+    transform: translateY(-5px);
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+.alpha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+}
+.alpha-one{
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.alpha-one h1{
+    font-size: 4rem;
+}
+.alpha-one p{
+    font-size: 1.1rem;
+}
+.alpha-two {
+    position: relative;
+    height: 550px;
+    width: 350px;
+    border: 3px solid #222;
+    border-radius: 9px;
+}
+#aplha-img{
+    position: absolute;
+    top: 30px;
+    left: -25px;
+    /* right: 60px; */
+    object-fit: cover;
+}
+#card-1{
+    position: absolute;
+    bottom: 280px;
+    right: 250px;
+}
+#card-2{
+    position: absolute;
+    left: 200px;
+    bottom: 20px;
+}
+.beta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    padding: 4rem;
+
+}
+
+.beta-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.gamma{
+    display: grid;
+    grid: repeat(3, auto) / repeat(3, 1fr);
+    gap: 2rem 2rem;
+    margin-top: 4rem;
+    padding: 4rem;
+
+}
+
+.gamma-alpha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.gamma-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 9px;
+    padding: 1rem;
+    text-align: start;
+    background: #f9f9f9;           
+}
+
+.gamma-card a:hover{
+    transform: translateX(10px);
+    transition: all 300ms ease;
+}
+
+.gamma-card a, .delta-text a, .beta-text a, .epsilon-text a{
+    display: flex;
+    align-items: center;
+}
+
+.gamma-card.three{
+    grid-column-start: 2;
+}
+
+.delta{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    padding: 4rem;
+
+}
+.delta-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.delta-span{
+    width: fit-content;
+    color: #7b06e8;
+    background: #bd8ceb5c;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+.epsilon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #0d60d8;
+}
+
+.epsilon-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.epsilon-img img{
+    height: 400px;
+    object-fit: cover;
+}
+
+.zeta{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+    margin-top: 4rem;
+    padding: 4rem;
+}
+
+.zeta-alpha{
+    /* padding: 1rem; */
+    overflow: hidden;
+}
+
+.zeta-card{
+    display: flex;
+    gap: 1rem;
+}
+
+.zeta-card p{
+    font-size: 12px;
+}
+
+.time{
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;           
+    border-radius: 9px;
+}
+
+.review img{
+    width: 120px;
+}
+
+.zeta-beta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.eta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    background-color: #f9f9f9;
+}
+
+.eta img{
+    width: 200px;
+}
+
+.theta{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+    padding: 4rem;
+}
+
+.theta-alpha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.theta-alpha a {
+    text-decoration: none;
+    display: block;
+    color: #222;
+    padding-bottom: 15px;
+    font-size: 13px;
+}
+
+.theta-alpha a:hover{
+    color: #0d60d8;
+}
+
+.theta-one{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer .icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+footer .contacts{
+    text-align: right;
+}
+
+.theta-beta{
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+}
+
+.theta p, .theta-beta p{
+    font-size: 13px;
+}
+
+@media (max-width: 1095px) {
+    .alpha{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .wrapper{
+        padding: 0.5rem;
+    }
+    .menu {
+        justify-content: space-between;
+    }
+    .nav-links, .nav-button{
+        display: none;
+    }
+    .mobile-menu{
+        position: fixed;
+        top: 0;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        padding: 0 2rem;
+        background-color: #fff;
+        opacity: 0;
+    }
+    .mobile-menu a{
+        display: block;
+    }
+    .toggle{
+        position: relative;
+        display: block;
+        width: 35px;
+        cursor: pointer;
+    
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+    }
+    .bars, .toggle:before, .toggle:after{
+        content: "";
+        display: block;
+        width: 35px;
+        height: 3px;
+        margin: 6px 0;
+        background: hsl(211.2,51.02%,9.61%);
+        transition: 0.3s;
+    }
+    .toggle.is-active:before{
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    .toggle.is-active:after{
+        transform: rotate(45deg) translate(-7px, -9px);
+    }
+    .is-active .bars{
+        opacity: 0;
+    }
+    .hide{
+        opacity: 1;
+        transition: 0.2s;
+    }
+    .item.primary.button a{
+        margin-bottom: 10px;
+    }
+    .alpha{
+        padding: 4rem 0;
+    }
+    .alpha-one{
+        max-width: 100%;
+        text-align: center;
+    }
+    .alpha-one h1{
+        font-size: 3rem;
+    }
+    .alpha-two{
+        margin: auto;
+        transform: scale(0.7);
+    }
+    .beta{
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    .gamma{
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    .gamma-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .gamma-alpha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+    }
+    .gamma-card a, .beta a{
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        text-align: center;
+    }
+    .delta{
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+    .delta-text, .epsilon-text, .zeta-beta, .alpha-one{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .eta{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .epsilon{
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+    .zeta{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .zeta-alpha{
+        order: 2;
+    }
+    .zeta-beta{
+        order: 1;
+    }
+    .theta{
+        padding: 0;
+    }
+    .theta-alpha{
+        display: block;
+    }
+    .theta-one{
+        display: grid;
+        justify-content: start;
+    }
+    footer .icons{
+        display: flex;
+        justify-content: start;
+    }
+    footer .contacts{
+        text-align: left;
+    }
+}

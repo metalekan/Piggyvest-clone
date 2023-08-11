@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="shortcut icon" href="images/piggyvests-p.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <title>Register New Account</title>
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="text-center p-4">
+            <a href="index.html"><img src="images/piggyvest-logo.0b78a8fa.svg" alt=""></a>
+        </div>
+        <div class="content bg-white">
+            <div class="text-center text-capitalize ">
+                <h2 class="text-primary">create a secure account</h2>
+                <p class="">welcome to the future of savings & investment</p>
+            </div>
+            <div class="form">
+                <div>
+                    <label for="exampleFormControlInput1" class="form-label">Full Name</label><br>
+                    <input type="text" class="input" id="fullName" placeholder="Full Name"><br><br>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="exampleFormControlInput2" class="form-label">Email address</label>
+                    <input type="email" class="input" id="email" placeholder="Email Address"><br><br>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
+                    <input type="tel" class="input" id="telephone" placeholder="Phone Number"><br><br>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="exampleFormControlInput4" class="form-label">Password</label>
+                    <input type="password" class="input" id="password" placeholder="Password"><br><br>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="formControlInput" class="form-label">Referrer Phone or Promo Code(Optional)</label>
+                    <input type="tel" id="referrer" class="input" placeholder="Referrer Phone or Code"><br><br>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="formControlInput" class="form-label">How Did You hear About Us?(Optional)</label>
+                    <select class="input" aria-label="Default select">
+                        <option selected="">Click To Select</option>
+                        <option value="1">Facebook</option>
+                        <option value="2">Twitter</option>
+                        <option value="3">Instagram</option>
+                        <option value="4">Friend/Family/Coworker Referral</option>
+                        <option value="5">Google search</option>
+                        <option value="6">Google playstore</option>
+                        <option value="7">Online Blog</option>
+                    </select><br><br>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary w-100 p-2" id="btnSignUp">CREATE ACCOUNT</button>
+                </div><br>
+            </div>
+        </div>
+        <div class="create text text-center text-capitalize"><a
+                href="login.html" target="_blank">Already have an account?
+                log in</a></div>
+    </div>
+    <div class="completed">
+        <h3>THANK YOU!</h3>
+        <h1>Sign Up Completed.</h1>
+        <img src="images/icon-complete.svg" alt="">
+        <a href="https://glistening-alfajores-b893f2.netlify.app/" class="btn btn-primary">LOG IN NOW!</a>
+        <!-- <button class="btn btn-primary">LOG IN NOW!</button> -->
+    </div>
+    <div class="position">
+        <img class="circle" src="images/download (2).png" alt="">
+        <img class="third" src="images/download.png" alt="">
+        <img class="second" src="images/download (1).png" alt="">
+        <img class="last" src="images/download (3).png" alt="">
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyB90d5kxe0rOSepH1CTV577urRGI3JEBSQ",
+            authDomain: "piggyvest-registration-page.firebaseapp.com",
+            databaseURL:
+                "https://piggyvest-registration-page-default-rtdb.firebaseio.com",
+            projectId: "piggyvest-registration-page",
+            storageBucket: "piggyvest-registration-page.appspot.com",
+            messagingSenderId: "763807492601",
+            appId: "1:763807492601:web:9ff0d2189a5dfde80ef528",
+            measurementId: "G-3N5D055GPZ",
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+
+
+        document.querySelector('#btnSignUp').addEventListener("click", () => {
+            // alert("sucess");
+            let email = document.querySelector('#email').value;
+            let password = document.querySelector('#password').value;
+            let content = document.querySelector('.main');
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    content.style.display = "none";
+                    document.querySelector('.completed').style.opacity = "1";
+                }).catch((error) => {
+                    alert("error");
+                });
+        });
+    </script>
+</body>
+
+</html>
